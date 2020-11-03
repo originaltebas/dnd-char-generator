@@ -1,0 +1,9 @@
+<script src="./js/multiLang.js"></script>
+<script>
+    multilang = new MultiLang('./languages', 'prueba', 'es_Es');
+    alert(multilang.get('Hello'));
+    multilang.changeLanguage('en_US');
+    alert(multilang.get('Hello'));
+    multilang.changeLanguage('es_ES');
+    alert(multilang.get('Hello'));
+</script>

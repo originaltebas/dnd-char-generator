@@ -1,61 +1,62 @@
-5th Edition Random Dungeons and Dragons Character Generator
-===
-
-**DESCRIPTION**
-
-An unofficial character generator for the 5th edition of Dungeons and Dragons.
-
-It's supposed to create a random character for DnD, but with some logic behind it to make it all quite cohesive.
-
-It provides a unique character every time.
+# Generador Aleatorio de Personajes de la 5ta edición de "Dungeons and Dragons" #
 
 ---
 
-**USES FOR THIS GENERATOR**
+**BASADO (FORKED)**
+Basado en "levi-blodgett/dnd-char-generator" y traducido y modificado. He agregado funcionalidad y modificado alguna lógica. Además he extraido todas las cadenas de generación de texto del código de manera que sea más sencillo mantener y realizar traducciones a cualquier idioma en un solo texto.
 
-* Creating your own character and not wanting to fill out every part of them
-* Quick one-shots, just print and go if you want, little to no prep required
-* Writing prompts/ideas for characters
-* DM tool for creating characters
-* Campaigns where you want a random character that can actually work
-* Campaigns where your PC's are a certain race, alignment, class, or background.
+
+**DESCRIPCIÓN**
+
+Generador de personajes no-oficial para la 5ta edición de "Dungeons and Dragons".
+
+Crea un personaje aleatorio de DnD pero aplicando una lógica para que el resultado sea razonble y tenga cohesión.
+
+Genera un personaje único cada vez.
+
+---
+
+**USOS DE ESTE GENERADOR**
+
+* Puedes crear tu propio personaje evitando tener que rellenar cada casilla y celda. Puedes elegir las opciones que quieres fijas y el resto se generará de manera aleatoria pero manteniendo cohesión del personaje.
+* Puedes crear personajes adicionales, dar al botón e imprimir.
+* Puedes usarlo como generador de ideas y guiónes para el personaje que estás creando.
+* Puedes usarlo como DM para crear personajes de la partida que estás preparando.
+* Puedes usarlo para campañas en la que quieras personajes aleatorios que funcionen.
+* Puedes usarlo en campañas en la que tus compañeros de aventura (PC's) son de ciertas razas, clases, trasfondos, etc.
 
 --- 
 
-**HOW TO SAVE AND PRINT**
+**COMO GUARDAR E IMPRIMIR**
 
-To edit: 
-1. Click on a field while you're in a browser and before you save it
-2. Run the file in a PDF editor and edit the PDF, all forms are editable even as a PDF.
+Para modificar: 
+1. Pincha en un campo mientras estás en el navegador y antes de guardarlo. 
+2. Abre el fichero en un editor de PDF (por ej. Adobe Acrobat) y lo modificas. Todos los campos del formularios son modificables. 
 
-To save:
-1. While in a browser, press ctrl + P on your keyboard, select to print to PDF, name the file, and save.
-2. While in anything else, press ctrl + S.
+Para guardar:
+1. Mientras estás en el navegador, presiona ctrl + P (o cmd + P en mac) y selecciona imprimir a PDF, ponle el nombre al fichero y guárdalo.
 
-To print:
-1. Press ctrl + P on your keyboard, select your desired printer, and print.
+Para imprimir:
+1. Presiona ctrl + P (o cmd + P en mac), elige la impresora e imprimelo.
 
 ---
 
 **FAQ**
 
-1. Why isn't there more supplemental content?
+1. ¿Por qué no hay mas contenido adicional?
 
-It is hard to add content to this, as scaling with just one person is always going to be difficult, but there is also the functionality of letting the user choose which ones they want included.
-Eventually I will probably add the option in the dropdowns to let the user checkmark each option they would like included, so if they hate dwarves or something, they don't need to just reroll them manually everytime or something.
+Es difícil agregar contenido y escalarlo cuando es algo que hace una sola persona, y además está también la funcionalidad de permitir al usuario elegir las funcionalidades que quiere incluir y darle lógica a todo el personaje.
 
-2. Why aren't there more character levels past level one?
+2. ¿Por qué no hay más personales más alla del nivel 1?
 
-Hard to add functionality, and there isn't much space on the character sheet really.
-It would be something I'd like to add in the future but it is hard to decide which order of things I should add first.
+Es difícil de agregar más funcionalidad y no hay demasiado espacio en la hoja de jugador. Es algo para agregar en el futuro.
 
-3. What feature are you adding next?
+1. ¿Qué fucionalidades os gustaría agregar?
 
-I'd check my [Twitter](https://twitter.com/LeviBlodgett), also @me if you have any questions yourself as well.
-I try to add whatever will be the best option in terms of best functionality with least effort, as I can't devote my time to this like I could a job.
+Puedes contactarme en [Twitter](https://twitter.com/originaltebas) o a través mi email en mi perfil de GitHub. Si tienes dudas o te gustaría alguna funcionalidad no dudes en contactarme. Obviamente, que pidas no significa que lo vaya a hacer, pero al menos me permite priorizar funcionalidades. Este es un fork de un proyecto de Levi Blodgett ("levi-blodgett/dnd-char-generator") en inglés que he traducido y he intentado añadir más funcinoalidades y prepararlo para que sea multi-idioma.
 
-4. Why did you create this?
+4. ¿Por qué has creado esto?
 
-For fun, I love programming and I love Dungeons and Dragons.
-I thought the world needed a real, practical DnD generator for characters, I felt it was WAY too lacking in this kind of area.
-This was my first big project with programming so don't roast my code too hard.
+Esto no lo cree yo. Es un fork de Levi Blodgett ("levi-blodgett/dnd-char-generator") que usaba para mis partidas. Pero tenía ganas de traducirlo e introducirle algunas modificaciones (sobre todo funcionales). 
+Según su autor original ha creado este proyecto : 
+"For fun, I love programming and I love Dungeons and Dragons. I thought the world needed a real, practical DnD generator for characters, I felt it was WAY too lacking in this kind of area. This was my first big project with programming so don't roast my code too hard."
