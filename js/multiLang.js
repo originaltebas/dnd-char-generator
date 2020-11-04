@@ -10,11 +10,22 @@ var MultiLang = function(path, name, lang, onload) {
         // load json from url
         if ((typeof path != 'undefined') && (typeof name != 'undefined') && (typeof lang != 'undefined')) {
             req.onreadystatechange = function() {
-                if (req.readyState == 4 && req.status == "200") {
-                    // load translations
-                    this.phrases = JSON.parse(req.responseText);
+                    if (req.readyState == 1) {
+                        console.log("Established server connection.");
+                    } else if (req.readyState == 2) {
+                        console.log("Request received by server.");
+                    } else if (req.readyState == 3) {
+                        console.log("Processing request.");
+                    } else if (req.readyState == 4) {
+                        console.log("Done loading!");
+                    } else {
+                        console.log("Something went wrong. :(");
+                    }
                 }
-            }
+                //  if (req.readyState == 4 && req.status == "200") {
+                // load translations
+                // this.phrases = JSON.parse(req.responseText);
+
 
             req.open("GET", path + "/" + name + "." + lang + ".json", true);
             req.send();
