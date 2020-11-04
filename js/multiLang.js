@@ -4,6 +4,7 @@ var MultiLang = function(path, name, lang, onload) {
     this.selectedLanguage = lang;
 
     var req = new XMLHttpRequest();
+    req.overrideMimeType("application/json");
 
     this.loadLanguage = function(path, name, lang) {
         // load json from url
@@ -24,8 +25,10 @@ var MultiLang = function(path, name, lang, onload) {
 
         // si tiene el idioma cargado no hacer nada, sino llamar a loadLang para cargarlo
         if (!this.phrases.hasOwnProperty(langcode)) {
-            this.loadLanguage(path, name, lang)
+            //uso langcode porque es el que está cambiando
+            this.loadLanguage(path, name, langcode)
             this.selectedLanguage = langcode;
+            lang = langcode;
         };
     };
 

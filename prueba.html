@@ -1,9 +1,15 @@
 <script src="./js/multiLang.js"></script>
 <script>
     multilang = new MultiLang('./languages', 'prueba', 'es_Es');
-    alert(multilang.getKey('Hello'));
-    multilang.changeLanguage('en_US');
-    alert(multilang.getKey('Hello'));
-    multilang.changeLanguage('es_ES');
-    alert(multilang.getKey('Hello'));
 </script>
+
+<body>
+    <h1>
+        HOLA
+    </h1>
+
+    <button value="javascript:multilang.getKey('Hello');">
+
+    </button>
+
+</body>
