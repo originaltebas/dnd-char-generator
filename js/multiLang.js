@@ -15,7 +15,7 @@ var MultiLang = function(path, name, lang, onload) {
                 }
             }
 
-            req.open("GET", path + "/" + name + "." + lang + ".json", false);
+            req.open("GET", path + "/" + name + "." + lang + ".json", true);
             req.send();
         }
     }
