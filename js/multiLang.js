@@ -1,52 +1,35 @@
 var MultiLang = function(path, name, lang, onload) {
     // variables
     this.phrases = {};
+    this.selectedLanguage = lang;
 
-    // keep only first two chareacters, for example 'en-US', 'fr', 'nl-NL', 'it', 'zh' etc.
-    this.selectedLanguage = (lang || navigator.language || navigator.userLanguage).substring(0, 5);
+    var req = new XMLHttpRequest();
 
-    // load json from url
-    if (typeof path != 'undefined') {
-        if (typeof name != 'undefined') {
-            if (typeof lang != 'undefined') {
-                var req = new XMLHttpRequest();
-
-                req.onreadystatechange = function() {
-
-                    if (req.readyState == 4) {
-                        // load translations
-                        this.phrases = JSON.parse(req.responseText);
-                    }
+    this.loadLanguage = function(path, name, lang) {
+        // load json from url
+        if ((typeof path != 'undefined') && (typeof name != 'undefined') && (typeof lang != 'undefined')) {
+            req.onreadystatechange = function() {
+                if (req.readyState == 4 && req.status == "200") {
+                    // load translations
+                    this.phrases = JSON.parse(req.responseText);
                 }
-
-                req.open("GET", path + "/" + name + "." + lang + ".json", false);
-                req.send();
             }
+
+            req.open("GET", path + "/" + name + "." + lang + ".json", false);
+            req.send();
         }
     }
 
     this.changeLanguage = function(langcode) {
 
-        // check if language code exists in translations
+        // si tiene el idioma cargado no hacer nada, sino llamar a loadLang para cargarlo
         if (!this.phrases.hasOwnProperty(langcode)) {
-            // if it doesn't exist; default to first language 
-
-            // NOTE: the order of properties in a JSON object are not *guaranteed* to be the same as loading time,
-            // however in practice all browsers do return them in order
-            for (var key in this.phrases) {
-                if (this.phrases.hasOwnProperty(key)) {
-                    langcode = key;
-                    break;
-                };
-            };
+            this.loadLanguage(path, name, lang)
+            this.selectedLanguage = langcode;
         };
-
-        // set as selected language code
-        this.selectedLanguage = langcode;
     };
 
-
-    this.get = function(key) {
+    this.getKey = function(key) {
         // get key phrase
         var str;
 
