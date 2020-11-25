@@ -8,7 +8,6 @@
 
 
 /* Background CSS */
-
 html {
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
@@ -20,8 +19,6 @@ html {
 ::-webkit-scrollbar {
     display: none;
 }
-
-@-moz-document url-prefix() {}
 
 body {
     padding: 0px;
